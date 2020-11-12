@@ -43,7 +43,7 @@ Al iniciar sesión seguir os siguientes pasos:
 
 ### Paso 2. Capturar los datos de la petición
 
-Los siguientes datos a modificar se encuentran en ***test/Api/ReporteDeCrditoConsolidadoApiTest.php***
+Los siguientes datos a modificar se encuentran en ***test/Api/ApiTest.php***
 
 Es importante contar con el setUp() que se encargará de inicializar la url. Modificar la URL ***('the_url')*** de la petición del objeto ***$config***, como se muestra en el siguiente fragmento de código:
 
@@ -51,47 +51,47 @@ Es importante contar con el setUp() que se encargará de inicializar la url. Mod
 <?php
 public function setUp()
 {
-    $config = new \RccClientSimulacion\Client\Configuration();
+    $config = new Configuration();
     $config->setHost('the_url');
-
-    $client = new \GuzzleHttp\Client();
-    $this->apiInstance = new \RccClientSimulacion\Client\Api\ReporteDeCrditoConsolidadoApi($client, $config);
-    $this->x_api_key = "your_api_key";
-}    
+    $this->x_api_key = "your_x_api_key";
+    $client = new Client();
+    $this->apiInstance = new Instance($client,$config);
+}   
 ```
 ```php
 
 <?php
 /**
-* Este es el método que se será ejecutado en la prueba ubicado en path/to/repository/test/Api/ReporteDeCrditoConsolidadoApiTest.php
+* Este es el método que se será ejecutado en la prueba ubicado en path/to/repository/test/Api/ApiTest.php
 */
 public function testGetFullReporte()
 {
     $x_full_report = true;
-    $request = new \RccClientSimulacion\Client\Model\PersonaPeticion();
+    $request = new PersonaPeticion();
     
-    $request->setPrimerNombre("xxxxx");
-    $request->setApellidoPaterno("xxxxx");
-    $request->setApellidoMaterno("xxxxx");
-    $request->setRfc("xxxxx");
-    $request->setFechaNacimiento("yyyy-MM-dd");
+    $request->setPrimerNombre("JUAN");
+    $request->setApellidoPaterno("SESENTAYDOS");
+    $request->setApellidoMaterno("PRUEBA");
+    $request->setRfc("SEPJ650809JG1");
+    $request->setFechaNacimiento("1965-08-09");
     $request->setNacionalidad("MX");
 
-    $domicilio = new \RccClientSimulacion\Client\Model\DomicilioPeticion();
-    $domicilio->setDireccion("xxxxx");
-    $domicilio->setColoniaPoblacion("xxxxx");
-    $domicilio->setCiudad("xxxxx");
-    $domicilio->setCp("xxxxx");
-    $domicilio->setDelegacionMunicipio("xxxxx");
-    $domicilio->setEstado("DF");
+    $domicilio = new DomicilioPeticion();
+    $domicilio->setDireccion("PASADISO ENCONTRADO 58");
+    $domicilio->setColoniaPoblacion("MONTEVIDEO");
+    $domicilio->setCiudad("CIUDAD DE MÉXICO");
+    $domicilio->setCp("07730");
+    $domicilio->setDelegacionMunicipio("GUSTAVO A MADERO");
+    $domicilio->setEstado("CDMX");
     $request->setDomicilio($domicilio);
 
     try {
         $result = $this->apiInstance->getReporte($this->x_api_key, $request, $x_full_report);
         $this->assertNotNull($result);
+        print_r($result);
         echo "testGetFullReporte finished\n";
     } catch (Exception $e) {
-        echo 'Exception when calling ReporteDeCrditoConsolidadoApi->getReporte: ', $e->getMessage(), PHP_EOL;
+        echo 'Exception when calling ApiTest->testGetFullReporte: ', $e->getMessage(), PHP_EOL;
     }
 }
 ?>
@@ -103,5 +103,8 @@ Para ejecutar las pruebas unitarias:
 ```sh
 ./vendor/bin/phpunit
 ```
+
+---
+[CONDICIONES DE USO, REPRODUCCIÓN Y DISTRIBUCIÓN](https://github.com/APIHub-CdC/licencias-cdc)
 
 [1]: https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos

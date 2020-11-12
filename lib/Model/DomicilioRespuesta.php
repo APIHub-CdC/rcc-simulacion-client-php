@@ -1,9 +1,9 @@
 <?php
 
-namespace RccClientSimulacion\Client\Model;
+namespace RCC\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \RccClientSimulacion\Client\ObjectSerializer;
+use \RCC\Simulacion\MX\Client\ObjectSerializer;
 
 class DomicilioRespuesta implements ModelInterface, ArrayAccess
 {
@@ -16,12 +16,12 @@ class DomicilioRespuesta implements ModelInterface, ArrayAccess
         'colonia_poblacion' => 'string',
         'delegacion_municipio' => 'string',
         'ciudad' => 'string',
-        'estado' => '\RccClientSimulacion\Client\Model\CatalogoEstados',
+        'estado' => '\RCC\Simulacion\MX\Client\Model\CatalogoEstados',
         'cp' => 'int',
         'fecha_residencia' => 'string',
         'numero_telefono' => 'string',
-        'tipo_domicilio' => '\RccClientSimulacion\Client\Model\CatalogoTipoDomicilio',
-        'tipo_asentamiento' => '\RccClientSimulacion\Client\Model\CatalogoTipoAsentamiento',
+        'tipo_domicilio' => '\RCC\Simulacion\MX\Client\Model\CatalogoTipoDomicilio',
+        'tipo_asentamiento' => '\RCC\Simulacion\MX\Client\Model\CatalogoTipoAsentamiento',
         'fecha_registro_domicilio' => 'string',
         'tipo_alta_domicilio' => 'int',
         'numero_otorgantes_carga' => 'int',
