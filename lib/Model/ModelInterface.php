@@ -1,6 +1,6 @@
 <?php
 
-namespace RccClientSimulacion\Client\Model;
+namespace RCC\Simulacion\MX\Client\Model;
 
 interface ModelInterface
 {

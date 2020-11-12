@@ -1,9 +1,9 @@
 <?php
 
-namespace RccClientSimulacion\Client\Model;
+namespace RCC\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \RccClientSimulacion\Client\ObjectSerializer;
+use \RCC\Simulacion\MX\Client\ObjectSerializer;
 
 class Respuesta implements ModelInterface, ArrayAccess
 {
@@ -16,12 +16,12 @@ class Respuesta implements ModelInterface, ArrayAccess
         'folio_consulta_otorgante' => 'string',
         'clave_otorgante' => 'string',
         'declaraciones_consumidor' => 'string',
-        'persona' => '\RccClientSimulacion\Client\Model\PersonasRespuesta',
-        'consultas' => '\RccClientSimulacion\Client\Model\Consulta[]',
-        'creditos' => '\RccClientSimulacion\Client\Model\Credito[]',
-        'domicilios' => '\RccClientSimulacion\Client\Model\DomicilioRespuesta[]',
-        'empleos' => '\RccClientSimulacion\Client\Model\Empleo[]',
-        'mensajes' => '\RccClientSimulacion\Client\Model\Mensaje[]'
+        'persona' => '\RCC\Simulacion\MX\Client\Model\PersonasRespuesta',
+        'consultas' => '\RCC\Simulacion\MX\Client\Model\Consulta[]',
+        'creditos' => '\RCC\Simulacion\MX\Client\Model\Credito[]',
+        'domicilios' => '\RCC\Simulacion\MX\Client\Model\DomicilioRespuesta[]',
+        'empleos' => '\RCC\Simulacion\MX\Client\Model\Empleo[]',
+        'mensajes' => '\RCC\Simulacion\MX\Client\Model\Mensaje[]'
     ];
     
     protected static $apihubFormats = [

@@ -1,7 +1,7 @@
 <?php
 
-namespace RccClientSimulacion\Client\Model;
-use \RccClientSimulacion\Client\ObjectSerializer;
+namespace RCC\Simulacion\MX\Client\Model;
+use \RCC\Simulacion\MX\Client\ObjectSerializer;
 
 class CatalogoResidencia
 {

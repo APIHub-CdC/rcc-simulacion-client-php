@@ -1,9 +1,9 @@
 <?php
 
-namespace RccClientSimulacion\Client\Model;
+namespace RCC\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \RccClientSimulacion\Client\ObjectSerializer;
+use \RCC\Simulacion\MX\Client\ObjectSerializer;
 
 class Errores implements ModelInterface, ArrayAccess
 {
@@ -12,7 +12,7 @@ class Errores implements ModelInterface, ArrayAccess
     protected static $apihubModelName = 'Errores';
     
     protected static $apihubTypes = [
-        'errores' => '\RccClientSimulacion\Client\Model\Error[]'
+        'errores' => '\RCC\Simulacion\MX\Client\Model\Error[]'
     ];
     
     protected static $apihubFormats = [

@@ -1,9 +1,9 @@
 <?php
 
-namespace RccClientSimulacion\Client\Model;
+namespace RCC\Simulacion\MX\Client\Model;
 
 use \ArrayAccess;
-use \RccClientSimulacion\Client\ObjectSerializer;
+use \RCC\Simulacion\MX\Client\ObjectSerializer;
 
 class PersonaPeticion implements ModelInterface, ArrayAccess
 {
@@ -21,13 +21,13 @@ class PersonaPeticion implements ModelInterface, ArrayAccess
         'rfc' => 'string',
         'curp' => 'string',
         'nacionalidad' => 'string',
-        'residencia' => '\RccClientSimulacion\Client\Model\CatalogoResidencia',
-        'estado_civil' => '\RccClientSimulacion\Client\Model\CatalogoEstadoCivil',
-        'sexo' => '\RccClientSimulacion\Client\Model\CatalogoSexo',
+        'residencia' => '\RCC\Simulacion\MX\Client\Model\CatalogoResidencia',
+        'estado_civil' => '\RCC\Simulacion\MX\Client\Model\CatalogoEstadoCivil',
+        'sexo' => '\RCC\Simulacion\MX\Client\Model\CatalogoSexo',
         'clave_elector_ife' => 'string',
         'numero_dependientes' => 'int',
         'fecha_defuncion' => 'string',
-        'domicilio' => '\RccClientSimulacion\Client\Model\DomicilioPeticion'
+        'domicilio' => '\RCC\Simulacion\MX\Client\Model\DomicilioPeticion'
     ];
     
     protected static $apihubFormats = [
