@@ -66,7 +66,6 @@ public function setUp()
 */
 public function testGetFullReporte()
 {
-    $x_full_report = true;
     $request = new PersonaPeticion();
     
     $request->setPrimerNombre("JUAN");
@@ -86,7 +85,7 @@ public function testGetFullReporte()
     $request->setDomicilio($domicilio);
 
     try {
-        $result = $this->apiInstance->getReporte($this->x_api_key, $request, $x_full_report);
+        $result = $this->apiInstance->getReporte($this->x_api_key, $request);
         $this->assertNotNull($result);
         print_r($result);
         echo "testGetFullReporte finished\n";
